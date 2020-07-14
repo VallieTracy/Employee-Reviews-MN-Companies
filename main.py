@@ -379,10 +379,11 @@ def navigate_to_reviews():
         logger.info('No reviews to scrape. Bailing!')
         return False
 
-    reviews_cell = browser.find_element_by_xpath(
-        '//a[@data-label="Reviews"]')
     # reviews_cell = browser.find_element_by_xpath(
-    #     "//*[@id='EmpLinksWrapper']/div//a[2]")
+    #     '//a[@data-label="Reviews"]') # MATTHEW
+    reviews_cell = browser.find_element_by_xpath(
+        "//*[@id='EmpLinksWrapper']/div//a[2]") # NOT MATTHEW
+    
     reviews_path = reviews_cell.get_attribute('href')
     
     # reviews_path = driver.current_url.replace('Overview','Reviews')
