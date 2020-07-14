@@ -381,6 +381,8 @@ def navigate_to_reviews():
 
     reviews_cell = browser.find_element_by_xpath(
         '//a[@data-label="Reviews"]')
+    # reviews_cell = browser.find_element_by_xpath(
+    #     "//*[@id='EmpLinksWrapper']/div//a[2]")
     reviews_path = reviews_cell.get_attribute('href')
     
     # reviews_path = driver.current_url.replace('Overview','Reviews')
